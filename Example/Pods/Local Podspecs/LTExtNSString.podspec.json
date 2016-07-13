@@ -18,5 +18,10 @@
   "platforms": {
     "ios": "6.0"
   },
-  "source_files": "LTExtNSString/Classes/**/*"
+  "source_files": "LTExtNSString/Classes/**/*",
+  "dependencies": {
+    "GTMBase64": [
+      "~> 1.0.0"
+    ]
+  }
 }
