@@ -1,0 +1,16 @@
+PODS:
+  - LTExtNSString (0.1.0)
+
+DEPENDENCIES:
+  - LTExtNSString (from `../`)
+
+EXTERNAL SOURCES:
+  LTExtNSString:
+    :path: ../
+
+SPEC CHECKSUMS:
+  LTExtNSString: d08aa0b1b3ca878adb2bf89a69ab17dc325b581a
+
+PODFILE CHECKSUM: 4f34f216acb1fcc12fd5fa56c38ae74cec34b2ae
+
+COCOAPODS: 1.0.0

@@ -1,0 +1,22 @@
+{
+  "name": "LTExtNSString",
+  "version": "0.1.0",
+  "summary": "A short description of LTExtNSString.",
+  "description": "个人工具",
+  "homepage": "https://github.com/yelon21/LTExtNSString",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "yelon21": "254956982@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/yelon21/LTExtNSString.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "6.0"
+  },
+  "source_files": "LTExtNSString/Classes/**/*"
+}
