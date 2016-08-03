@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface NSString (LTRex)
+
+- (BOOL)isEmpty;
 //包含数字
 - (BOOL)lt_containNumber;
 //包含大写字母
