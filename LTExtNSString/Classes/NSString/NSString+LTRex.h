@@ -19,6 +19,8 @@
 - (BOOL)lt_containcLowercaseLetter;
 //包含字母
 - (BOOL)lt_containcLetters;
+//是否包含中文
+- (BOOL)lt_containCN;
 //密码:（6-16）位字符
 - (BOOL)lt_vaidPassword;
 
@@ -48,4 +50,5 @@
 - (BOOL)isNumberString:(NSInteger)len;
 //ip
 - (BOOL)lt_isIpString;
+
 @end

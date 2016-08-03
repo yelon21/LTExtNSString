@@ -78,6 +78,13 @@
     
     return [self evaluate:rex];
 }
+//是否包含中文
+- (BOOL)lt_containCN{
+    
+    NSString *rex = @".*[\\u4e00-\\u9fa5]+.*";
+    
+    return [self evaluate:rex];
+}
 //密码:（6-16）位字符
 - (BOOL)lt_vaidPassword{
     
@@ -223,4 +230,5 @@
     BOOL vaild = [self evaluate:rex];
     return vaild;
 }
+
 @end
