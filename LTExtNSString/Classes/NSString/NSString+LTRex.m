@@ -209,6 +209,13 @@
     BOOL vaild = [self evaluate:rex];
     return vaild;
 }
+//验证n位全数字
+- (BOOL)isNumberString:(NSInteger)len{
+    
+    NSString *rex = [NSString stringWithFormat:@"^[\\d]{%ld}$",(long)len]; //^\\d{%ld}[0-9]$
+    BOOL vaild = [self evaluate:rex];
+    return vaild;
+}
 //ip
 - (BOOL)lt_isIpString{
     

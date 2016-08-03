@@ -44,6 +44,8 @@
 - (BOOL)lt_isMathsNumberIntegerString;
 //全数字字符串
 - (BOOL)lt_isNumberString;
+//验证n位全数字
+- (BOOL)isNumberString:(NSInteger)len;
 //ip
 - (BOOL)lt_isIpString;
 @end
