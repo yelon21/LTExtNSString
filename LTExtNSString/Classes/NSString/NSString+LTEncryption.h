@@ -14,4 +14,8 @@
 - (NSString *)lt_MD5;
 
 - (NSString *)lt_getFileMD5;
+
+- (NSString *)lt_URLEncodeString;
+- (NSString *)lt_URLDecodeString;
+- (NSString *)lt_URLGBKEncodedString;
 @end

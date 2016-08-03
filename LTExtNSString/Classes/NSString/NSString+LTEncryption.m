@@ -154,4 +154,34 @@ done:
     
     return result;
 }
+
+- (NSString *)lt_URLEncodeString{
+    //    __bridge_transfer arc时候用(__bridge_transfer NSString *)
+    return ( NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(
+                                                                                  NULL,
+                                                                                  (__bridge CFStringRef)self,
+                                                                                  NULL,
+                                                                                  CFSTR("!*'();:@&=+$,/?%#[]"), CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding)));
+}
+
+- (NSString *)lt_URLDecodeString{
+
+    NSString *decodedString=(__bridge_transfer NSString *)CFURLCreateStringByReplacingPercentEscapesUsingEncoding(NULL,
+                                                                                                                  (__bridge CFStringRef)self,
+                                                                                                                  CFSTR(""), CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding));
+    
+    return decodedString;
+}
+
+- (NSString *)lt_URLGBKEncodedString{
+
+    CFStringEncoding enc = CFStringConvertNSStringEncodingToEncoding(kCFStringEncodingGB_18030_2000);
+    NSString *result = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
+                                                                                             (CFStringRef)self,
+                                                                                             NULL,
+                                                                                             CFSTR("!*'();:@&=+$,/?%#[]"),
+                                                                                             enc));
+    return result;
+}
+
 @end

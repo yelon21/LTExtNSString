@@ -11,7 +11,6 @@
 		1915CC76A298D22C27439141D805F20A /* Pods-LTExtNSString_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E26D495CE9C1BCCCFC0154B905037C9 /* Pods-LTExtNSString_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		292DDB2F04BF11EC166E7146EF38F8B6 /* NSString+LTEncryption.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DF9DF99602704DDAA4481A23434B334 /* NSString+LTEncryption.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C71EFA10780675481F813DF056C99ED /* NSString+LTRex.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DCBC26C6AB3F3032F9DE16FD2DBCD7A /* NSString+LTRex.m */; };
-		30067A8B1A6E52D5A0A13DE62FD85E66 /* NSString+LTTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E4DEB533A5C6985F1F856EEF9E04D2 /* NSString+LTTransform.m */; };
 		31A11927A7B0E91A0F130D67E6A33536 /* GTMBase64-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 466604C97432E866E169019F3312D7AE /* GTMBase64-dummy.m */; };
 		3F00B2931B9301801E93DA555685045A /* NSString+LTLocalizedString.m in Sources */ = {isa = PBXBuildFile; fileRef = C34DEAC19A24964130BD84F5DD26179E /* NSString+LTLocalizedString.m */; };
 		4BCECDF7423E8560C1C6B584B1012B0D /* GTMBase64.h in Headers */ = {isa = PBXBuildFile; fileRef = 38F0A836A4B5B2C5A2ECBEB9352D8FCB /* GTMBase64.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -34,7 +33,6 @@
 		E2CADBF3F5E84EE0587C65685728FE19 /* LTExtNSString-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C3A808975694CDB12B5456E1AA43A6D /* LTExtNSString-dummy.m */; };
 		EF791EE26E319B32D5D80B5A93A72BC8 /* NSString+LTJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DF28FDB4486BA0013A3AF7384735C4 /* NSString+LTJson.m */; };
 		F01A6FDF76EA6D181B2255D56E0FC270 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56F8566DC2CDEC78A55C3643392FDA27 /* Foundation.framework */; };
-		FF9CC58FE8CBFD8DBB5437FACEE2A16A /* NSString+LTTransform.h in Headers */ = {isa = PBXBuildFile; fileRef = A02A6FF98B62C91DE71E5C034B2A5778 /* NSString+LTTransform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,7 +96,6 @@
 		9DCBC26C6AB3F3032F9DE16FD2DBCD7A /* NSString+LTRex.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+LTRex.m"; sourceTree = "<group>"; };
 		9DDBAB75C7663FB1485D317B68E32C81 /* NSString+html.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+html.m"; sourceTree = "<group>"; };
 		9E26D495CE9C1BCCCFC0154B905037C9 /* Pods-LTExtNSString_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LTExtNSString_Example-umbrella.h"; sourceTree = "<group>"; };
-		A02A6FF98B62C91DE71E5C034B2A5778 /* NSString+LTTransform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+LTTransform.h"; sourceTree = "<group>"; };
 		A13330C15F14A1F75CFAE42A7765F578 /* Pods-LTExtNSString_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-LTExtNSString_Tests.modulemap"; sourceTree = "<group>"; };
 		A8C037B8CB66A08BEB69A4F72A688F38 /* GTMBase64-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GTMBase64-prefix.pch"; sourceTree = "<group>"; };
 		AB0B3AC75A95393CE34321B3B6C83629 /* Pods-LTExtNSString_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LTExtNSString_Tests-resources.sh"; sourceTree = "<group>"; };
@@ -107,7 +104,6 @@
 		BD7A4B756087B644E3D7EA4B65666476 /* LTExtNSString.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = LTExtNSString.modulemap; sourceTree = "<group>"; };
 		C34DEAC19A24964130BD84F5DD26179E /* NSString+LTLocalizedString.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+LTLocalizedString.m"; sourceTree = "<group>"; };
 		CD65C7327CAEDDC99665DA2346E86040 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E9E4DEB533A5C6985F1F856EEF9E04D2 /* NSString+LTTransform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+LTTransform.m"; sourceTree = "<group>"; };
 		EA9A0E648B8C184F621D2840EDD47FA3 /* NSString+LTEncryption.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+LTEncryption.m"; sourceTree = "<group>"; };
 		EEA467F0CD6E80A6C4AF1DFF1F12A771 /* Pods_LTExtNSString_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LTExtNSString_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F26D0EFB160B69E830539B9FCCA0973C /* Pods-LTExtNSString_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LTExtNSString_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -334,8 +330,6 @@
 				C34DEAC19A24964130BD84F5DD26179E /* NSString+LTLocalizedString.m */,
 				45F4ED8533154E4E4992E4F3CEE2829C /* NSString+LTRex.h */,
 				9DCBC26C6AB3F3032F9DE16FD2DBCD7A /* NSString+LTRex.m */,
-				A02A6FF98B62C91DE71E5C034B2A5778 /* NSString+LTTransform.h */,
-				E9E4DEB533A5C6985F1F856EEF9E04D2 /* NSString+LTTransform.m */,
 			);
 			path = NSString;
 			sourceTree = "<group>";
@@ -361,7 +355,6 @@
 				8D0BF1B9F7A554EE41FBAC04D01F7B3D /* NSString+LTJson.h in Headers */,
 				90AF03CF83539F7E1715129372803423 /* NSString+LTLocalizedString.h in Headers */,
 				D8A1EBD3B31A475F2A54D694CE7D060F /* NSString+LTRex.h in Headers */,
-				FF9CC58FE8CBFD8DBB5437FACEE2A16A /* NSString+LTTransform.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,7 +506,6 @@
 				EF791EE26E319B32D5D80B5A93A72BC8 /* NSString+LTJson.m in Sources */,
 				3F00B2931B9301801E93DA555685045A /* NSString+LTLocalizedString.m in Sources */,
 				2C71EFA10780675481F813DF056C99ED /* NSString+LTRex.m in Sources */,
-				30067A8B1A6E52D5A0A13DE62FD85E66 /* NSString+LTTransform.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
