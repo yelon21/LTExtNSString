@@ -10,7 +10,10 @@
 
 @interface NSString (LTRex)
 
-- (BOOL)isEmpty;
+NSString *LT_FilterString(id obj);
+
+- (BOOL)isEmpty NS_DEPRECATED(1_0, 1_0,1_0, 1_0,"请使用 lt_isEmpty");
+- (BOOL)lt_isEmpty;
 //包含数字
 - (BOOL)lt_containNumber;
 //包含大写字母

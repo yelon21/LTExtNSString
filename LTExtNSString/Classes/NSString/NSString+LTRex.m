@@ -10,34 +10,48 @@
 
 @implementation NSString (LTRex)
 
+NSString *LT_FilterString(id obj){
+    
+    if (obj == nil) {
+        
+        return @"";
+    }
+    
+    if ([obj isKindOfClass:[NSString class]]) {
+        
+        return [NSString stringWithFormat:@"%@",obj];
+        
+    }else if([obj isKindOfClass:[NSNumber class]]){
+        
+        return [NSString stringWithFormat:@"%@",obj];
+    }
+    return @"";
+    
+}
+
 - (BOOL)isEmpty{
+    
+    return [self lt_isEmpty];
+}
+
+- (BOOL)lt_isEmpty{
     
     if (self == nil) {
         
         return YES;
     }
     
-    if ([self isKindOfClass:[NSString class]]) {
+    if ([self isKindOfClass:[NSString class]] || ([self isKindOfClass:[NSNumber class]])) {
         
-        NSString *temp = (NSString *) self;
-        if (temp == nil) {
-            
-            return YES;
-        }
-        else if ([temp length] == 0) {
-            
-            return YES;
-        }
-        else if ([[temp stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] length] == 0) {
-            
-            return YES;
-        }
-        return NO;
-    }
-    else {
+        NSString *temp = [NSString stringWithFormat:@"%@",self];
         
-        return YES;
+        if ([temp length] == 0 || [[temp stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] length] == 0) {
+            
+            return YES;
+        }
     }
+    
+    return NO;
 }
 
 - (BOOL)evaluate:(NSString *)rex{
