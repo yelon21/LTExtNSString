@@ -28,12 +28,13 @@ NSString *LT_FilterString(id obj){
     return @"";
     
 }
-
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored"-Wdeprecated-declarations"
 - (BOOL)isEmpty{
     
     return [self lt_isEmpty];
 }
-
+#pragma clang diagnostic pop
 - (BOOL)lt_isEmpty{
     
     if (self == nil) {
@@ -56,7 +57,7 @@ NSString *LT_FilterString(id obj){
 
 - (BOOL)evaluate:(NSString *)rex{
     
-    if ([self isEmpty]) {
+    if ([self lt_isEmpty]) {
         
         return NO;
     }
