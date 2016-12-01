@@ -17,7 +17,7 @@
 - (NSString *)lt_stringByFilterCharacters:(NSCharacterSet *)setToRemove;
 
 //number to ￥123.00
-- (NSString *)lt_amountRMBStringByNumber:(NSNumber *)number;
++ (NSString *)LT_amountRMBStringByNumber:(NSNumber *)number;
 //￥123.00 to number
 - (NSNumber *)lt_numberByAmountRMBString;
 

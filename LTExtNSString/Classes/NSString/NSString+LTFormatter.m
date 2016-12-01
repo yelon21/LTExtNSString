@@ -58,12 +58,7 @@
     return newString;
 }
 
-- (NSString *)lt_amountRMBStringByNumber:(NSNumber *)number{
-
-    if ([self lt_isEmpty]) {
-        
-        return @"";
-    }
++ (NSString *)LT_amountRMBStringByNumber:(NSNumber *)number{
     
     if (!number || [number isKindOfClass:[NSNumber class]]) {
         
