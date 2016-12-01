@@ -60,7 +60,7 @@
 
 + (NSString *)LT_amountRMBStringByNumber:(NSNumber *)number{
     
-    if (!number || [number isKindOfClass:[NSNumber class]]) {
+    if (!number || ![number isKindOfClass:[NSNumber class]]) {
         
         return @"";
     }
