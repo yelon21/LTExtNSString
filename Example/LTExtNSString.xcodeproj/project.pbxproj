@@ -20,9 +20,9 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
-		701A66E691FCEA511E431DA0 /* Pods_LTExtNSString_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A58A01771741D5234A1BE0D /* Pods_LTExtNSString_Tests.framework */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		DB36EF691A0A0C4770EA59E7 /* Pods_LTExtNSString_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AA6962CF7D697C9FE6B9154 /* Pods_LTExtNSString_Example.framework */; };
+		8C5B614D9AD0D6626EDABA8A /* libPods-LTExtNSString_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FBE69824073C6C0CBB97374 /* libPods-LTExtNSString_Example.a */; };
+		968EB210824F69AB326C1293 /* libPods-LTExtNSString_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD95EC49DF7F7F03C1953DF /* libPods-LTExtNSString_Tests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +37,7 @@
 
 /* Begin PBXFileReference section */
 		013925F543D009E4FCC74128 /* Pods-LTExtNSString_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LTExtNSString_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LTExtNSString_Example/Pods-LTExtNSString_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		2A58A01771741D5234A1BE0D /* Pods_LTExtNSString_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LTExtNSString_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FBE69824073C6C0CBB97374 /* libPods-LTExtNSString_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LTExtNSString_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B75371FB7C689B663164D2D /* Pods-LTExtNSString_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LTExtNSString_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-LTExtNSString_Example/Pods-LTExtNSString_Example.release.xcconfig"; sourceTree = "<group>"; };
 		317F408A740F640F044916B9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		549919A227EE6BCC8C6B2496 /* LTExtNSString.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LTExtNSString.podspec; path = ../LTExtNSString.podspec; sourceTree = "<group>"; };
@@ -60,8 +60,8 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		6AA6962CF7D697C9FE6B9154 /* Pods_LTExtNSString_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LTExtNSString_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CEDC65A57C7C590228130A8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		7BD95EC49DF7F7F03C1953DF /* libPods-LTExtNSString_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LTExtNSString_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C9712E50808A17DE9612CBD /* Pods-LTExtNSString_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LTExtNSString_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LTExtNSString_Tests/Pods-LTExtNSString_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		EDF3CD1E3E6C223181F8E36C /* Pods-LTExtNSString_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LTExtNSString_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LTExtNSString_Tests/Pods-LTExtNSString_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -75,7 +75,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				DB36EF691A0A0C4770EA59E7 /* Pods_LTExtNSString_Example.framework in Frameworks */,
+				8C5B614D9AD0D6626EDABA8A /* libPods-LTExtNSString_Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +86,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				701A66E691FCEA511E431DA0 /* Pods_LTExtNSString_Tests.framework in Frameworks */,
+				968EB210824F69AB326C1293 /* libPods-LTExtNSString_Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,8 +121,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				6AA6962CF7D697C9FE6B9154 /* Pods_LTExtNSString_Example.framework */,
-				2A58A01771741D5234A1BE0D /* Pods_LTExtNSString_Tests.framework */,
+				1FBE69824073C6C0CBB97374 /* libPods-LTExtNSString_Example.a */,
+				7BD95EC49DF7F7F03C1953DF /* libPods-LTExtNSString_Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

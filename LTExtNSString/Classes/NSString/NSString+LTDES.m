@@ -7,7 +7,7 @@
 //
 
 #import "NSString+LTDES.h"
-#import "LTBase64.h"
+#import "GTMBase64.h"
 #import <CommonCrypto/CommonCrypto.h>
 
 @implementation NSString (LTDES)
@@ -42,7 +42,7 @@
         
         NSData *data = [NSData dataWithBytes:buffer length:(NSUInteger)numBytesEncrypted];
         
-        ciphertext = [[NSString alloc] initWithData:[LTBase64 encodeData:data]
+        ciphertext = [[NSString alloc] initWithData:[GTMBase64 encodeData:data]
                                            encoding:NSUTF8StringEncoding];
     }
     
@@ -54,7 +54,7 @@
     
     NSString *cipherText = self;
     
-    NSData* cipherData = [LTBase64 decodeString:cipherText];
+    NSData* cipherData = [GTMBase64 decodeString:cipherText];
     
     NSUInteger bufferPtrSize = ([cipherData length] + kCCBlockSizeDES) & ~(kCCBlockSizeDES - 1);
     unsigned char buffer[bufferPtrSize];

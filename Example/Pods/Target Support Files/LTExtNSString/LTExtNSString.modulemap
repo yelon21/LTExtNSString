@@ -1,6 +1,0 @@
-framework module LTExtNSString {
-  umbrella header "LTExtNSString-umbrella.h"
-
-  export *
-  module * { export * }
-}
