@@ -20,6 +20,13 @@
 
 @end
 
+@interface NSObject (LTJson)
+
+- (NSData *)lt_jsonData;
+
+@end
+
+
 @interface NSDictionary (LTJson)
 
 - (NSString *)lt_jsonString;

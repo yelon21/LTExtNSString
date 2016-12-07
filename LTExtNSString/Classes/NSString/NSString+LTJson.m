@@ -45,9 +45,9 @@
 }
 @end
 
-@implementation NSDictionary (LTJson)
+@implementation NSObject (LTJson)
 
-- (NSString *)lt_jsonString{
+- (NSData *)lt_jsonData{
     
     if (!self||![NSJSONSerialization isValidJSONObject:self]) {
         
@@ -63,6 +63,19 @@
         NSLog(@"error==%@",error);
         return nil;
     }
+}
+@end
+
+@implementation NSDictionary (LTJson)
+
+- (NSString *)lt_jsonString{
+
+    NSData *result = [self lt_jsonData];
+
+    if (!result) {
+        
+        return nil;
+    }
     
     NSString *resultString = [[NSString alloc]initWithData:result
                                                   encoding:NSUTF8StringEncoding];
@@ -75,19 +88,10 @@
 
 - (NSString *)lt_jsonString{
     
-    if (!self||![NSJSONSerialization isValidJSONObject:self]) {
+    NSData *result = [self lt_jsonData];
+    
+    if (!result) {
         
-        return nil;
-    }
-    
-    
-    NSError *error = nil;
-    NSData *result = [NSJSONSerialization dataWithJSONObject:self
-                                                options:kNilOptions error:&error];
-    
-    if (error) {
-        
-        NSLog(@"error==%@",error);
         return nil;
     }
     
