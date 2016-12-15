@@ -7,12 +7,19 @@
 //
 
 #import "LYAppDelegate.h"
-
+#import "NSString+LTRex.h"
 @implementation LYAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    BOOL flag = [@"1234" lt_isNumberString:4];
+    
+    flag = [@"12x4" lt_isNumberString:4];
+    
+    flag = [@"1234" lt_isNumberString:3];
+    
     return YES;
 }
 

@@ -231,6 +231,13 @@ NSString *LT_FilterString(id obj){
     BOOL vaild = [self evaluate:rex];
     return vaild;
 }
+//全数字字符串 限定长度
+- (BOOL)lt_isNumberString:(NSUInteger)length{
+
+    NSString *rex = [NSString stringWithFormat:@"^\\d{%@}$",LT_FilterString(@(length))];
+    BOOL vaild = [self evaluate:rex];
+    return vaild;
+}
 //验证n位全数字
 - (BOOL)isNumberString:(NSInteger)len{
     

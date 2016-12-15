@@ -49,6 +49,8 @@ NSString *LT_FilterString(id obj);
 - (BOOL)lt_isMathsNumberIntegerString;
 //全数字字符串
 - (BOOL)lt_isNumberString;
+//全数字字符串 限定长度
+- (BOOL)lt_isNumberString:(NSUInteger)length;
 //验证n位全数字
 - (BOOL)isNumberString:(NSInteger)len;
 //ip
