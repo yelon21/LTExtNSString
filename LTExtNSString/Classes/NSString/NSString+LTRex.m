@@ -234,14 +234,33 @@ NSString *LT_FilterString(id obj){
 //全数字字符串 限定长度
 - (BOOL)lt_isNumberString:(NSUInteger)length{
 
-    NSString *rex = [NSString stringWithFormat:@"^\\d{%@}$",LT_FilterString(@(length))];
+    return [self lt_isNumberString:length toLength:length];
+}
+//全数字字符串 限定长度 length-toLength
+- (BOOL)lt_isNumberString:(NSUInteger)length
+                 toLength:(NSUInteger)toLength{
+    NSString *rex = @"";
+    
+    if (length == toLength) {
+        
+        rex = [NSString stringWithFormat:@"^\\d{%@}$",LT_FilterString(@(length))];
+    }
+    else if (length < toLength) {
+        
+        rex = [NSString stringWithFormat:@"^\\d{%@,%@}$",LT_FilterString(@(length)),LT_FilterString(@(toLength))];
+    }
+    else {
+        
+        rex = [NSString stringWithFormat:@"^\\d{%@,%@}$",LT_FilterString(@(toLength)),LT_FilterString(@(length))];
+    }
+    
     BOOL vaild = [self evaluate:rex];
     return vaild;
 }
-//验证n位全数字
-- (BOOL)isNumberString:(NSInteger)len{
+//验证中文
+- (BOOL)lt_isChineseNameString{
     
-    NSString *rex = [NSString stringWithFormat:@"^[\\d]{%ld}$",(long)len]; //^\\d{%ld}[0-9]$
+    NSString *rex = [NSString stringWithFormat:@"^([\\u4e00-\\u9fa5])+(·)*([\\u4e00-\\u9fa5])+$"];
     BOOL vaild = [self evaluate:rex];
     return vaild;
 }
