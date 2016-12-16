@@ -14,11 +14,11 @@
 {
     // Override point for customization after application launch.
     
-    BOOL flag = [@"哈哈·哈哈" lt_isChineseString];
+    BOOL flag = [@"aa哈哈·哈哈" lt_isChineseNameString];
     
-    flag = [@"哈·哈哈哈" lt_isChineseString];
+    flag = [@"哈·哈哈哈T" lt_isChineseNameString];
     
-    flag = [@"哈·哈·" lt_isChineseString];
+    flag = [@"哈·哈·324" lt_isChineseNameString];
     
     return YES;
 }

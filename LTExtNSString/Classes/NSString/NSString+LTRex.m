@@ -260,7 +260,7 @@ NSString *LT_FilterString(id obj){
 //验证中文
 - (BOOL)lt_isChineseNameString{
     
-    NSString *rex = [NSString stringWithFormat:@"^([\\u4e00-\\u9fa5])+(·)*([\\u4e00-\\u9fa5])+$"];
+    NSString *rex = [NSString stringWithFormat:@"^([\\u4e00-\\u9fa5])+(·[\\u4e00-\\u9fa5]+)*$"];
     BOOL vaild = [self evaluate:rex];
     return vaild;
 }
