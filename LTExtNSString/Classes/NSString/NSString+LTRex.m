@@ -28,13 +28,45 @@ NSString *LT_FilterString(id obj){
     return @"";
     
 }
+
+BOOL LT_IsEmptyString(NSObject *obj){
+    
+    BOOL isEmpty = YES;
+    
+    if (!obj || ![obj isKindOfClass:[NSString class]]) {
+        
+        isEmpty = YES;
+    }
+    else{
+    
+        isEmpty = NO;
+    }
+    
+    if (!isEmpty) {
+        
+        NSString *string = obj;
+        
+        if ([string length] == 0
+            || [[string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] length] == 0) {
+            
+            isEmpty = YES;
+        }
+        else{
+        
+            isEmpty = NO;
+        }
+    }
+    
+    return isEmpty;
+}
+
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored"-Wdeprecated-declarations"
 - (BOOL)isEmpty{
     
     return [self lt_isEmpty];
 }
-#pragma clang diagnostic pop
+
 - (BOOL)lt_isEmpty{
     
     if (self == nil) {
@@ -54,7 +86,7 @@ NSString *LT_FilterString(id obj){
     
     return NO;
 }
-
+#pragma clang diagnostic pop
 - (BOOL)evaluate:(NSString *)rex{
     
     if ([self lt_isEmpty]) {
