@@ -140,7 +140,7 @@ BOOL LT_IsEmptyString(NSObject *obj){
 //密码:（6-16）位字符
 - (BOOL)lt_isVaidPassword{
     
-    return [self lt_isVaidPassword:6 toLength:20];
+    return [self lt_isVaidPassword:6 toLength:16];
 }
 //密码:字符 length-toLength
 - (BOOL)lt_isVaidPassword:(NSUInteger)length
