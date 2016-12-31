@@ -134,12 +134,39 @@ BOOL LT_IsEmptyString(NSObject *obj){
 }
 //密码:（6-16）位字符
 - (BOOL)lt_vaidPassword{
-    
-    NSString *rex = @"^\\S{6,16}$";
-    
-    return [self evaluate:rex];
-}
 
+    return [self lt_isVaidPassword];
+}
+//密码:（6-16）位字符
+- (BOOL)lt_isVaidPassword{
+    
+    return [self lt_isVaidPassword:6 toLength:20];
+}
+//密码:字符 length-toLength
+- (BOOL)lt_isVaidPassword:(NSUInteger)length
+                 toLength:(NSUInteger)toLength{
+    NSString *rex = @"^(?=.*[0-9])(?=.*[a-zA-Z])([A-Z]|[a-z]|[0-9]|[!@#$%%^&*()'\"=_:;?~`|+-\\\\/\\[\\]{},.<>€￡￥·])";
+    
+    if (toLength == 0) {
+        
+        rex = [NSString stringWithFormat:@"%@{%@,}$",rex,LT_FilterString(@(length))];
+    }
+    else if (length == toLength) {
+        
+        rex = [NSString stringWithFormat:@"%@{%@}$",rex,LT_FilterString(@(length))];
+    }
+    else if (length < toLength) {
+        
+        rex = [NSString stringWithFormat:@"%@{%@,%@}$",rex,LT_FilterString(@(length)),LT_FilterString(@(toLength))];
+    }
+    else {
+        
+        rex = [NSString stringWithFormat:@"%@{%@,%@}$",rex,LT_FilterString(@(toLength)),LT_FilterString(@(length))];
+    }
+    
+    BOOL vaild = [self evaluate:rex];
+    return vaild;
+}
 //银行卡号
 - (BOOL)lt_isBankCardNumber{
     NSString *rex = @"^([0-9]{16}|[0-9]{19})$";
@@ -273,7 +300,11 @@ BOOL LT_IsEmptyString(NSObject *obj){
                  toLength:(NSUInteger)toLength{
     NSString *rex = @"";
     
-    if (length == toLength) {
+    if (toLength == 0) {
+        
+        rex = [NSString stringWithFormat:@"^\\d{%@,}$",LT_FilterString(@(0))];
+    }
+    else if (length == toLength) {
         
         rex = [NSString stringWithFormat:@"^\\d{%@}$",LT_FilterString(@(length))];
     }

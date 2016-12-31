@@ -26,7 +26,12 @@ BOOL LT_IsEmptyString(NSObject *obj);
 //是否包含中文
 - (BOOL)lt_containCN;
 //密码:（6-16）位字符
-- (BOOL)lt_vaidPassword;
+- (BOOL)lt_vaidPassword NS_DEPRECATED(1_0, 1_0,1_0, 1_0,"请使用 lt_isVaidPassword");
+//密码:（6-16）位字符
+- (BOOL)lt_isVaidPassword;
+//密码:字符 length-toLength
+- (BOOL)lt_isVaidPassword:(NSUInteger)length
+                 toLength:(NSUInteger)toLength;
 
 //银行卡号
 - (BOOL)lt_isBankCardNumber;

@@ -14,14 +14,28 @@
 {
     // Override point for customization after application launch.
     
-    BOOL flag = [@"aa哈哈·哈哈" lt_isChineseNameString];
+    NSArray *list = @[@"w12.!@#$%^&*()'\"=_:;?~`|+-\\/[]{},.<>€￡￥·",
+                      @"aaaaaa",
+                      @"aaaaaa....",
+                      @"12344445",
+                      @"12344445....qew",
+                      @"aaaaaa12344445",
+                      @"`!@#$%^&*()'\"=_:;?~|+-\\/[]{},.<>€￡￥·",
+                      @"`!@#$%^&*()'\"=_:;?~|+-\\/[]{},.<>€￡￥·123",
+                      @"`!@#$%^&*()'\"=_:;?~|+-\\/[]{},.<>€￡￥·qwe",
+                      @"`!@#$%^&*()'\"=_:;?~|+-\\/[]{},.<>€￡￥·qwe123",
+                      ];
     
-    flag = [@"哈·哈哈哈T" lt_isChineseNameString];
+    for (NSString *string in  list) {
+        
+        NSLog(@"%d=%@",[string lt_isVaidPassword:0 toLength:0],string);
+    }
     
-    flag = [@"哈·哈·324" lt_isChineseNameString];
     
     return YES;
 }
+
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

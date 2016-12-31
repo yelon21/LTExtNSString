@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "LTExtNSString/LYAppDelegate.m"
-            timestampString = "503585379.975933"
+            filePath = "../LTExtNSString/Classes/NSString/NSString+LTRex.m"
+            timestampString = "504855825.224858"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "-application:didFinishLaunchingWithOptions:"
+            startingLineNumber = "154"
+            endingLineNumber = "154"
+            landmarkName = "-lt_isVaidPassword:toLength:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "LTExtNSString/LYAppDelegate.m"
-            timestampString = "503585380.63037"
+            filePath = "../LTExtNSString/Classes/NSString/NSString+LTRex.m"
+            timestampString = "504855864.773921"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "-application:didFinishLaunchingWithOptions:"
+            startingLineNumber = "152"
+            endingLineNumber = "152"
+            landmarkName = "-lt_isVaidPassword:toLength:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
