@@ -8,6 +8,7 @@
 
 #import "LYAppDelegate.h"
 #import "NSString+LTRex.h"
+#import "NSString+LTCommon.h"
 @implementation LYAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -31,6 +32,7 @@
         NSLog(@"%d=%@",[string lt_isVaidPassword:0 toLength:0],string);
     }
     
+    NSLog(@"sss=%@",[NSString LT_StringJoindByComponents:@"12 3 ",@"wq",@" ",@"--", nil]);
     
     return YES;
 }

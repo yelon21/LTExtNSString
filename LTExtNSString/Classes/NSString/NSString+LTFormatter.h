@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NSString+LTCommon.h"
 
 @interface NSString (LTFormatter)
 //过滤掉string中的字符

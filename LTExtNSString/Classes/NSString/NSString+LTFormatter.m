@@ -7,13 +7,12 @@
 //
 
 #import "NSString+LTFormatter.h"
-#import "NSString+LTRex.h"
 
 @implementation NSString (LTFormatter)
 
 - (NSString *)lt_stringByFilterCharactersInString:(NSString *)string{
 
-    if ([self lt_isEmpty]) {
+    if (LT_IsEmptyString(self)) {
         
         return @"";
     }
@@ -29,7 +28,7 @@
 
 - (NSString *)lt_stringBySaveCharactersInString:(NSString *)string{
     
-    if ([self lt_isEmpty]) {
+    if (LT_IsEmptyString(self)) {
         
         return @"";
     }
@@ -46,7 +45,7 @@
 
 - (NSString *)lt_stringByFilterCharacters:(NSCharacterSet *)setToRemove{
     
-    if ([self lt_isEmpty]) {
+    if (LT_IsEmptyString(self)) {
         
         return @"";
     }
@@ -76,7 +75,7 @@
 
 - (NSNumber *)lt_numberByAmountRMBString{
     
-    if ([self lt_isEmpty]) {
+    if (LT_IsEmptyString(self)) {
         
         return @"";
     }
@@ -92,7 +91,7 @@
 
 - (NSString *)lt_cardNoStringWithSpace{
 
-    if ([self lt_isEmpty]) {
+    if (LT_IsEmptyString(self)) {
         
         return @"";
     }
@@ -123,7 +122,7 @@
 
 - (NSString *)lt_cardNoStringWithoutSpace{
     
-    if ([self lt_isEmpty]) {
+    if (LT_IsEmptyString(self)) {
         
         return @"";
     }

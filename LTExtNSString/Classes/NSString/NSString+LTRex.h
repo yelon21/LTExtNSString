@@ -7,14 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NSString+LTCommon.h"
 
 @interface NSString (LTRex)
 
-NSString *LT_FilterString(id obj);
-BOOL LT_IsEmptyString(NSObject *obj);
-
-- (BOOL)isEmpty NS_DEPRECATED(1_0, 1_0,1_0, 1_0,"请使用 LT_isEmptyString(NSObject *obj)");
-- (BOOL)lt_isEmpty NS_DEPRECATED(1_0, 1_0,1_0, 1_0,"请使用 LT_isEmptyString(NSObject *obj)");
 //包含数字
 - (BOOL)lt_containNumber;
 //包含大写字母

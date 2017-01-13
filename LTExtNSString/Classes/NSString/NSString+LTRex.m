@@ -10,86 +10,9 @@
 
 @implementation NSString (LTRex)
 
-NSString *LT_FilterString(id obj){
-    
-    if (obj == nil) {
-        
-        return @"";
-    }
-    
-    if ([obj isKindOfClass:[NSString class]]) {
-        
-        return [NSString stringWithFormat:@"%@",obj];
-        
-    }else if([obj isKindOfClass:[NSNumber class]]){
-        
-        return [NSString stringWithFormat:@"%@",obj];
-    }
-    return @"";
-    
-}
-
-BOOL LT_IsEmptyString(NSObject *obj){
-    
-    BOOL isEmpty = YES;
-    
-    if (!obj || ![obj isKindOfClass:[NSString class]]) {
-        
-        isEmpty = YES;
-    }
-    else{
-    
-        isEmpty = NO;
-    }
-    
-    if (!isEmpty) {
-        
-        NSString *string = obj;
-        
-        if ([string length] == 0
-            || [[string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] length] == 0) {
-            
-            isEmpty = YES;
-        }
-        else{
-        
-            isEmpty = NO;
-        }
-    }
-    
-    return isEmpty;
-}
-
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored"-Wdeprecated-declarations"
-- (BOOL)isEmpty{
-    
-    return [self lt_isEmpty];
-}
-
-- (BOOL)lt_isEmpty{
-    
-    if (self == nil) {
-        
-        return YES;
-    }
-    
-    if ([self isKindOfClass:[NSString class]] || ([self isKindOfClass:[NSNumber class]])) {
-        
-        NSString *temp = [NSString stringWithFormat:@"%@",self];
-        
-        if ([temp length] == 0 || [[temp stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] length] == 0) {
-            
-            return YES;
-        }
-    }
-    
-    return NO;
-}
-#pragma clang diagnostic pop
 - (BOOL)evaluate:(NSString *)rex{
     
-    if ([self lt_isEmpty]) {
+    if (LT_IsEmptyString(self)) {
         
         return NO;
     }
@@ -262,7 +185,7 @@ BOOL LT_IsEmptyString(NSObject *obj){
 //18位身份证号
 - (BOOL)lt_isIDCardNumber18{
     
-    NSString *rex = @"^\\d{10}((0[1-9])|(1[0-2]))((0[1-9])|([1-2]\\d)|(3[0-1]))\\d{3}([0-9]|X|x)$";
+    NSString *rex = @"^\\d{10}((0[1-9])|(1[0-2]))((0[1-9])|([1-2]\\d)|(3[0-1]))\\d{3}([0-9]|X)$";
     BOOL vaild = [self evaluate:rex];
     return vaild;
 }
