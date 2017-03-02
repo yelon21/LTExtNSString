@@ -7,6 +7,7 @@
 //
 
 #import "LYViewController.h"
+#import "NSString+LTRex.h"
 
 @interface LYViewController ()
 
@@ -18,6 +19,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    NSString *mobile = [NSString stringWithFormat:@"17099999999"];
+    if (![mobile lt_isPhoneNumberStringContainVirtualNumber]) {
+        
+        NSLog(@"mobile=%@",mobile);
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning
