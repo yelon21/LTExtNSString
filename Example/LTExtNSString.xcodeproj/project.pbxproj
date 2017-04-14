@@ -247,6 +247,10 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = yelon21;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = U7DFNWQBUU;
+						ProvisioningStyle = Manual;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -513,6 +517,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = U7DFNWQBUU;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LTExtNSString/LTExtNSString-Prefix.pch";
 				INFOPLIST_FILE = "LTExtNSString/LTExtNSString-Info.plist";
@@ -520,6 +525,8 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8899cfd5-9159-41e6-a237-143e455629a7";
+				PROVISIONING_PROFILE_SPECIFIER = debug_any;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -531,6 +538,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = U7DFNWQBUU;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LTExtNSString/LTExtNSString-Prefix.pch";
 				INFOPLIST_FILE = "LTExtNSString/LTExtNSString-Info.plist";
@@ -538,6 +546,8 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8899cfd5-9159-41e6-a237-143e455629a7";
+				PROVISIONING_PROFILE_SPECIFIER = debug_any;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

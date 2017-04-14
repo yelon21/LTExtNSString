@@ -44,7 +44,7 @@ BOOL LT_IsEmptyString(NSObject *obj){
     
     if (!isEmpty) {
         
-        NSString *string = obj;
+        NSString *string = (NSString *)obj;
         
         if ([string length] == 0
             || [[string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] length] == 0) {

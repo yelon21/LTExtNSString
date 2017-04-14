@@ -23,7 +23,7 @@
     
     NSCharacterSet *setToRemove = [NSCharacterSet characterSetWithCharactersInString:string];
     
-    return [self lt_stringByFilterCharacters:setToRemove];
+    return [sourceString lt_stringByFilterCharacters:setToRemove];
 }
 
 - (NSString *)lt_stringBySaveCharactersInString:(NSString *)string{
@@ -40,7 +40,7 @@
     NSCharacterSet *setToRemove = [[NSCharacterSet characterSetWithCharactersInString:string]
                                    invertedSet];
     
-    return [self lt_stringByFilterCharacters:setToRemove];
+    return [sourceString lt_stringByFilterCharacters:setToRemove];
 }
 
 - (NSString *)lt_stringByFilterCharacters:(NSCharacterSet *)setToRemove{
@@ -77,16 +77,16 @@
     
     if (LT_IsEmptyString(self)) {
         
-        return @"";
+        return @(0);
     }
     
     NSNumberFormatter *formatter = [[NSNumberFormatter alloc]init];
     [formatter setLocale:[NSLocale localeWithLocaleIdentifier:@"zh_Hans_CN"]];
     [formatter setNumberStyle:NSNumberFormatterCurrencyStyle];
     
-    NSString *string = [formatter numberFromString:self];
+    NSNumber *number = [formatter numberFromString:self];
     
-    return string;
+    return number;
 }
 
 - (NSString *)lt_cardNoStringWithSpace{
@@ -97,8 +97,6 @@
     }
     NSString *tmp = [self stringByReplacingOccurrencesOfString:@" "
                                                     withString:@""];
-    
-    BOOL flag = [tmp length]>4;
     
     NSInteger count = ceil([tmp length]/4.0);
     
