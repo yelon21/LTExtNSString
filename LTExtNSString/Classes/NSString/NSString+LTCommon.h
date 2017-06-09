@@ -10,8 +10,14 @@
 
 @interface NSString (LTCommon)
 
-NSString *LT_FilterString(id obj);
-BOOL LT_IsEmptyString(NSObject *obj);
-
 + (NSString *)LT_StringJoindByComponents:(NSString *)components, ... NS_REQUIRES_NIL_TERMINATION;
 @end
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+    NSString *LT_FilterString(id obj);
+    BOOL LT_IsEmptyString(NSObject *obj);
+#ifdef __cplusplus
+}
+#endif

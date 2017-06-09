@@ -17,14 +17,20 @@ typedef NS_ENUM(NSUInteger, LTLanguageType) {
 
 @interface NSString (LTLocalizedString)
 
-NSString *LTLocalizedString(NSString *key,NSString *comment);
-NSString *LTLocalizedStringDefaultValue(NSString *key,NSString *common,NSString *value);
-
 + (void)LT_setLanguageType:(LTLanguageType)type;
 
 + (void)LT_setLanguage:(NSString *)language;
 + (NSString *)LT_language;
 
 @end
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+    NSString *LTLocalizedString(NSString *key,NSString *comment);
+    NSString *LTLocalizedStringDefaultValue(NSString *key,NSString *common,NSString *value);
+#ifdef __cplusplus
+}
+#endif
 
 extern NSString *const LTLanguageTypeDidChangedNotification;
