@@ -11,6 +11,8 @@
 @interface NSString (LTCommon)
 
 + (NSString *)LT_StringJoindByComponents:(NSString *)components, ... NS_REQUIRES_NIL_TERMINATION;
+
+- (BOOL)lt_containsString:(NSString *)str;
 @end
 
 #ifdef __cplusplus

@@ -92,4 +92,23 @@ BOOL LT_IsEmptyString(NSObject *obj){
     return resultString;
 }
 
+- (BOOL)lt_containsString:(NSString *)str{
+
+    if (!self || ![self isKindOfClass:[NSString class]]) {
+        
+        return NO;
+    }
+    
+    if (!str || ![str isKindOfClass:[NSString class]]) {
+        
+        return NO;
+    }
+    
+    if ([self rangeOfString:str].location == NSNotFound) {
+        
+        return NO;
+    }
+    return YES;
+}
+
 @end
