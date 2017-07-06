@@ -92,7 +92,7 @@
 }
 //银行卡号
 - (BOOL)lt_isBankCardNumber{
-    NSString *rex = @"^([0-9]{16}|[0-9]{19})$";
+    NSString *rex = @"^([0-9]{14,21})$";
     BOOL vaild = [self evaluate:rex];
     return vaild;
 }
