@@ -124,7 +124,7 @@
     NSString * CU = @"^1(3[0-2]|45|5[56]|8[56]|7[156])\\d{8}$";
     
     //中国电信：China Telecom
-    NSString * CT = @"^1((33|53|8[019]|7[37]|49)[0-9]|349)\\d{7}$";
+    NSString * CT = @"^1((33|53|8[019]|7[37]|49|99)[0-9]|349)\\d{7}$";
     
     if ([self evaluate:MOBILE]
         || [self evaluate:CM]
