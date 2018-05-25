@@ -51,7 +51,7 @@
 //是否包含中文
 - (BOOL)lt_containCN{
     
-    NSString *rex = @".*[\\u4e00-\\u9fa5]+.*";
+    NSString *rex = @".*[\\u4e00-\\u9fa5\\ue863\\u4dae]+.*";
     
     return [self evaluate:rex];
 }
@@ -255,7 +255,7 @@
 //验证中文
 - (BOOL)lt_isChineseNameString{
     
-    NSString *rex = [NSString stringWithFormat:@"^([\\u4e00-\\u9fa5])+(·[\\u4e00-\\u9fa5]+)*$"];
+    NSString *rex = [NSString stringWithFormat:@"^([\\u4e00-\\u9fa5\\ue863\\u4dae])+(·[\\u4e00-\\u9fa5\\ue863\\u4dae]+)*$"];
     BOOL vaild = [self evaluate:rex];
     return vaild;
 }
