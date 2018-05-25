@@ -255,7 +255,7 @@
 //验证中文
 - (BOOL)lt_isChineseNameString{
     
-    NSString *rex = [NSString stringWithFormat:@"^([\\u4e00-\\u9fa5\\ue863\\u4dae])+(·[\\u4e00-\\u9fa5\\ue863\\u4dae]+)*$"];
+    NSString *rex = [NSString stringWithFormat:@"^([\\u4e00-\\u9fa5\\ue863\\u4dae])(·[\\u4e00-\\u9fa5\\ue863\\u4dae]+)*([\\u4e00-\\u9fa5\\ue863\\u4dae])+$"];
     BOOL vaild = [self evaluate:rex];
     return vaild;
 }
