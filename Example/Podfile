@@ -3,9 +3,9 @@
 target 'LTExtNSString_Example' do
   pod 'LTExtNSString', :path => '../'
 
-  target 'LTExtNSString_Tests' do
-    inherit! :search_paths
-
-    
-  end
+#  target 'LTExtNSString_Tests' do
+#    inherit! :search_paths
+#
+#    
+#  end
 end

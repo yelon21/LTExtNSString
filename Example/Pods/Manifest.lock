@@ -1,19 +1,23 @@
 PODS:
-  - GTMBase64 (1.0.0)
+  - GTMBase64 (1.0.1)
   - LTExtNSString (0.1.0):
     - GTMBase64 (~> 1.0.0)
 
 DEPENDENCIES:
   - LTExtNSString (from `../`)
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - GTMBase64
+
 EXTERNAL SOURCES:
   LTExtNSString:
     :path: "../"
 
 SPEC CHECKSUMS:
-  GTMBase64: 0da7372e95f5171f3f652db38cde6716f8eb5e24
-  LTExtNSString: 49ffb1f1ed1ed81924b9d396bef8cf948a55c49b
+  GTMBase64: f0f91be06a7a20b84c8e4fee30c0430395091d82
+  LTExtNSString: 14137422a133866370e4f8f3bfde360f204ccef4
 
-PODFILE CHECKSUM: 22404ebaff289bb0a5a72882854e40bdf38bda6c
+PODFILE CHECKSUM: f307e80c0d689fffc72d065da4e82a9f0dc26ba9
 
-COCOAPODS: 1.2.0.beta.1
+COCOAPODS: 1.6.0.beta.1
